@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Startup_Controller">
+   <top>
+      <AnchorPane prefHeight="93.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="172.0" layoutY="14.0" prefHeight="78.0" prefWidth="290.0" text="Gari Adda" textFill="#f4d03f">
+               <font>
+                  <Font name="Cooper Black" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="283.0" prefWidth="600.0" style="-fx-background-color: #F4D03F;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="146.0" fitWidth="320.0" layoutX="8.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/NicePng_car-clip-art-png_3304412%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="customer_login" layoutX="392.0" layoutY="66.0" mnemonicParsing="false" onAction="#CustomerLogin" prefHeight="56.0" prefWidth="142.0" text="Customer Login">
+               <font>
+                  <Font name="Cooper Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="manager_login" layoutX="392.0" layoutY="162.0" mnemonicParsing="false" onAction="#ManagerLogin" prefHeight="56.0" prefWidth="142.0" text="Manager Login">
+               <font>
+                  <Font name="Cooper Black" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="report_emergency" layoutX="478.0" layoutY="279.0" mnemonicParsing="false" onAction="#ReportEmergency" text="Report Emergency" />
+            <Label layoutX="58.0" layoutY="162.0" text="Chalo Book karo Yaar">
+               <font>
+                  <Font name="Cooper Black" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
