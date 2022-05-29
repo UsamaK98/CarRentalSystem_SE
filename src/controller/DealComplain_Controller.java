@@ -23,6 +23,7 @@ public class DealComplain_Controller {
 	private RadioButton button3;
 	@FXML
 	private RadioButton button4;
+	
 	public void toHomepage(ActionEvent event) throws IOException
 	{
 		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("../view/Manager_Actions.fxml"));

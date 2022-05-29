@@ -23,17 +23,18 @@ public class Customer {
 	private String Age;
 	
 	@Column(name="contactno")
-	String ContactNumber;
+	private String ContactNumber;
 	
 	@Column(name="email")
-	String Email;
+	private String Email;
 	
 	@Column(name="address")
-	String Address;
+	private String Address;
 	
 	public Customer() {
 		super();
 	}
+	
 	public Customer(String name, String age, String contactNumber, String email, String address) {
 		super();
 		Name = name;

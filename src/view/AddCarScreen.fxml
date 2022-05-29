@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MangerHomePage_Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.toAddCar_Controller">
    <top>
       <AnchorPane prefHeight="94.0" prefWidth="600.0" style="-fx-background-color: #F4D03F;" BorderPane.alignment="CENTER">
          <children>
@@ -51,13 +51,13 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="207.0" layoutY="76.0" />
-            <TextField layoutX="207.0" layoutY="119.0" />
-            <TextField layoutX="207.0" layoutY="169.0" />
-            <TextField layoutX="207.0" layoutY="216.0" />
+            <TextField fx:id="CarName" layoutX="207.0" layoutY="76.0" />
+            <TextField fx:id="CarMake" layoutX="207.0" layoutY="119.0" />
+            <TextField fx:id="CarType" layoutX="207.0" layoutY="169.0" />
+            <TextField fx:id="CarRent" layoutX="207.0" layoutY="216.0" />
             <AnchorPane layoutX="435.0" layoutY="242.0">
                <children>
-                  <Button fx:id="Done" mnemonicParsing="false" onAction="#toHomepage" prefHeight="44.0" prefWidth="102.0" text="Add Car">
+                  <Button fx:id="Done" mnemonicParsing="false" onAction="#addMyCar" prefHeight="44.0" prefWidth="102.0" text="Add Car">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font>

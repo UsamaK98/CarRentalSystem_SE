@@ -17,6 +17,9 @@ import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Properties;
 
+import model.Car;
+import model.Customer;
+
 public class DBHandler implements Storage {
 	private static StandardServiceRegistry registry;
     private static SessionFactory factory;
@@ -31,7 +34,7 @@ public class DBHandler implements Storage {
             	
             	Properties settings = new Properties();
 				settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/rms_db?useSSL=false");
+				settings.put(Environment.URL, "jdbc:mysql://localhost:3306/crms_db?useSSL=false");
 				settings.put(Environment.USER, "root");
 				settings.put(Environment.PASS, "ehacker321");
 				settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
@@ -45,7 +48,7 @@ public class DBHandler implements Storage {
 				configuration.setProperties(settings);
 				
 				//configuration.addAnnotatedClass(Customer.class);
-				//configuration.addAnnotatedClass(Instructor.class);
+				configuration.addAnnotatedClass(Car.class);
 				//configuration.addAnnotatedClass(Course.class);
 				//configuration.addAnnotatedClass(InstructorDetail.class);
 	
@@ -77,24 +80,23 @@ public class DBHandler implements Storage {
         return factory;
 	}
 	
-//    @Override
-//    public Boolean saveDonor(Donor newDonor) {
-//        Boolean isAdded = null;
-//        Session session = FactoryProvider.getFactory().openSession();
-//        Transaction tx = session.beginTransaction();
-//        try {
-//            session.save(newDonor.getAddress());
+    @Override
+    public void AddNewCar (Car c) {
+        Boolean isAdded = null;
+        Session session = DBHandler.getSessionFactory().openSession();
+        Transaction tx = session.beginTransaction();
+        try {
+            session.save(c);
 //            session.save(newDonor.getContactInfo());
 //            session.save(newDonor);
-//            tx.commit();
-//            isAdded = true;
-//        } catch (Exception e){
-//            System.out.println("Phone number is used by another donor");
-//            isAdded = false;
-//        }
-//        session.close();
-//        return isAdded;
-//    }
+            tx.commit();
+            isAdded = true;
+        } catch (Exception e){
+           System.out.println("Phone number is used by another donor");
+            isAdded = false;
+        }
+        session.close();
+    }
 //
 //   
 //    @Override
@@ -148,13 +150,6 @@ public class DBHandler implements Storage {
 //        return isAdded;
 //    }
 
-
-	@Override
-	public void ReservedSeats() {
-		//String reservedfor, String date, String time, String reservationID, String tt
-		// TODO Auto-generated method stub
-		
-	}
 
    
 

@@ -29,7 +29,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <TextArea layoutX="14.0" layoutY="27.0" prefHeight="222.0" prefWidth="556.0" promptText="Enter Feedback:" />
+            <TextArea fx:id="feedback" layoutX="14.0" layoutY="27.0" prefHeight="222.0" prefWidth="556.0" promptText="Enter Feedback:" />
             <Button fx:id="homepage" layoutX="513.0" layoutY="259.0" mnemonicParsing="false" onAction="#tohomePage" text="Submit">
                <font>
                   <Font name="System Bold" size="12.0" />

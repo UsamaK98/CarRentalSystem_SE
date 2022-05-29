@@ -14,7 +14,7 @@ public class Car {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
-	protected int id;
+	private int id;
 	
 	@Column(name="model")
 	private String model;
@@ -22,9 +22,21 @@ public class Car {
 	@Column(name="make")
 	private String make;
 	
-	@Column(name="year")
-	private int year;
+	@Column(name="type")
+	private String type;
 	
+	@Column(name="rent")
+	private int rent;
 	
+	public Car() {
+		super();
+	}
+	
+	public Car(String n,String m,String t,String r) {
+		model=n;
+		make=m;
+		type=t;
+		rent=Integer.parseInt(r);
+	}
 	
 }

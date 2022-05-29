@@ -2,15 +2,15 @@ package services;
 
 import java.util.List;
 
-//import application.Model.Customer;
+import model.Car;
 //import application.Model.Receipt;
 //import application.Model.StaffMember;
 
 public interface Storage {
 	 
-	//void NewCustomer(Customer c);
-	//void NewReceipt(Receipt r);
+	void AddNewCar (Car c);
+	//void NewReceipt(Recveipt r);
 	//void NewStaff(StaffMember s);
-	void ReservedSeats();
+	//void ReservedSeats();
 	
 }

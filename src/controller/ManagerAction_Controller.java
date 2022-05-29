@@ -41,7 +41,7 @@ public class ManagerAction_Controller {
 	private Button DealComplain;
 	public void toDealComaplain(ActionEvent event) throws IOException
 	{
-		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("ViewComplainScreen.fxml"));
+		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("../view/ViewComplainScreen.fxml"));
 		Scene scene = new Scene(root);
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		primaryStage.resizableProperty().setValue(Boolean.FALSE);
@@ -54,7 +54,7 @@ public class ManagerAction_Controller {
 	private Button ViewFeedback;
 	public void toViewFeedback(ActionEvent event) throws IOException
 	{
-		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("ViewFeedback.fxml"));
+		BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("../view/ViewFeedback.fxml"));
 		Scene scene = new Scene(root);
 		Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		primaryStage.resizableProperty().setValue(Boolean.FALSE);
